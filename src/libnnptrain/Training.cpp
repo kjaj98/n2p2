@@ -129,7 +129,7 @@ void Training::selectSets()
             bTest = (testSet[s.index] > 0);
         else 
             bTest = (gsl_rng_uniform(rng) < testSetFraction);
-        if bTest
+        if(bTest)
         {
             s.sampleType=Structure::ST_TEST;
             size_t const& na = s.numAtoms;
@@ -139,7 +139,7 @@ void Training::selectSets()
         }
         else
         {
-            s.sampleType= Structure::ST_TRAINING
+            s.sampleType= Structure::ST_TRAINING;
             for (size_t j = 0; j < numElements; ++j)
             {
                 numAtomsPerElement.at(j) += s.numAtomsPerElement.at(j);
