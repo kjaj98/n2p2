@@ -56,6 +56,7 @@ map<string, shared_ptr<Settings::Key>> const createKnownKeywordsMap()
     // Training keywords.
     m["random_seed"                   ] = "";
     m["test_fraction"                 ] = "";
+    m["test_fraction_exact"           ] = "";
     m["epochs"                        ] = "";
     m["normalize_data_set"            ] = "";
     m["use_short_forces"              ] = "";
